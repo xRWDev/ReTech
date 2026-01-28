@@ -77,7 +77,7 @@ export default function HomePage() {
               <Sparkles className="w-4 h-4" />
               Premium Used Electronics
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
               Tech That's{' '}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Better
@@ -88,14 +88,14 @@ export default function HomePage() {
               Discover certified pre-owned smartphones, laptops, and gadgets. 
               Quality tested, warranty included, sustainably renewed.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button size="lg" className="btn-primary-gradient w-full sm:w-auto" asChild>
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="btn-primary-gradient" asChild>
                 <Link to="/catalog">
                   Browse Catalog
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="glass-card w-full sm:w-auto" asChild>
+              <Button size="lg" variant="outline" className="glass-card" asChild>
                 <Link to="/catalog?category=smartphones">
                   Shop Phones
                 </Link>
@@ -108,7 +108,7 @@ export default function HomePage() {
       {/* Features Strip */}
       <section className="border-b border-border/50 bg-card/50">
         <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 divide-x divide-border/50">
+          <div className="grid grid-cols-3 divide-x divide-border/50">
             {features.map((feature, i) => (
               <motion.div
                 key={feature.label}
@@ -129,7 +129,7 @@ export default function HomePage() {
       {/* Categories */}
       <section className="container mx-auto px-4 py-12">
         <h2 className="text-2xl font-bold mb-6">Browse Categories</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3 lg:gap-4">
+        <div className="grid grid-cols-4 lg:grid-cols-7 gap-3 lg:gap-4">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.id}
@@ -163,7 +163,7 @@ export default function HomePage() {
           </Button>
         </div>
         
-        <div className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
+        <div className="overflow-x-auto pb-4 -mx-4 px-4">
           <div className="flex gap-4" style={{ minWidth: 'max-content' }}>
             {isLoading
               ? Array.from({ length: 4 }).map((_, i) => (
@@ -190,7 +190,7 @@ export default function HomePage() {
       {recentlyViewed.length > 0 && (
         <section className="container mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold mb-6">Recently Viewed</h2>
-          <div className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
+          <div className="overflow-x-auto pb-4 -mx-4 px-4">
             <div className="flex gap-4" style={{ minWidth: 'max-content' }}>
               {recentlyViewed.slice(0, 6).map((product, i) => (
                 <motion.div

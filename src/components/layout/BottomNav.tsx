@@ -27,7 +27,7 @@ export function BottomNav({ className }: BottomNavProps) {
     : navItems;
 
   return (
-    <nav className={cn('bottom-nav safe-bottom', className)}>
+    <nav className={cn('bottom-nav', className)}>
       <div className="flex items-center justify-around">
         {items.map((item) => {
           const isActive = location.pathname === item.path ||

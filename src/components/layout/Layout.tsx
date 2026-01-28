@@ -26,7 +26,7 @@ export function Layout({ children }: LayoutProps) {
         <Sidebar className="hidden lg:flex" />
 
         {/* Main content */}
-        <main className="flex-1 min-h-[calc(100vh-64px)] pb-20 lg:pb-0 safe-bottom">
+        <main className="flex-1 min-h-[calc(100vh-64px)] pb-20 lg:pb-0">
           <motion.div
             key={location.pathname}
             initial={{ opacity: 0, y: 10 }}
