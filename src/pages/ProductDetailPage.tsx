@@ -377,7 +377,7 @@ export default function ProductDetailPage() {
       {similarProducts && similarProducts.length > 0 && (
         <section>
           <h2 className="text-xl font-bold mb-4">Similar Products</h2>
-          <div className="overflow-x-auto pb-4 -mx-4 px-4">
+          <div className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
             <div className="flex gap-4" style={{ minWidth: 'max-content' }}>
               {similarProducts.map((p) => (
                 <div key={p.id} className="w-56 flex-shrink-0">

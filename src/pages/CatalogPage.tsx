@@ -205,13 +205,13 @@ export default function CatalogPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {/* Sort */}
           <Select
             value={filters.sortBy}
             onValueChange={(v) => setFilter('sortBy', v as any)}
           >
-            <SelectTrigger className="w-36">
+            <SelectTrigger className="w-32 sm:w-36">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
             <SelectContent>
@@ -303,7 +303,7 @@ export default function CatalogPage() {
         {/* Product grid */}
         <div className="flex-1">
           {/* Category chips - mobile */}
-          <div className="lg:hidden -mx-4 px-4 mb-4 overflow-x-auto">
+          <div className="lg:hidden -mx-4 px-4 mb-4 overflow-x-auto scrollbar-hide">
             <div className="flex gap-2">
               {(Object.keys(CATEGORY_LABELS) as ProductCategory[]).map((cat) => {
                 const isActive = filters.categories.includes(cat);
